@@ -1,0 +1,102 @@
+/* all pages hero styles start */
+.general {
+  background-image: url("./assets/ArticlesHero.jpg");
+  background-size: cover;
+}
+.business {
+  background-image: url("./assets/businessHeroImg.jpg");
+  background-size: cover;
+}
+.sports {
+  background-image: url("./assets/sportsHeroImg.jpg");
+  background-size: cover;
+}
+.technology {
+  background-image: url("./assets/technologyHeroImg.jpg");
+  background-size: cover;
+}
+/* all pages hero styles end */
+
+footer {
+  background-image: url("./assets/FooterImg.jpg");
+  background-size: cover;
+}
+
+/* comment section style start */
+.commentSection-light::-webkit-scrollbar {
+  width: 6px;
+}
+.commentSection-light::-webkit-scrollbar-track {
+  background: #fbfffb;
+  border-radius: 20px;
+}
+.commentSection-light::-webkit-scrollbar-thumb {
+  background-color: #1e2939;
+  border-radius: 20px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+.commentSection-dark::-webkit-scrollbar {
+  width: 6px;
+}
+.commentSection-dark::-webkit-scrollbar-track {
+  background: #1e2939;
+  border-radius: 20px;
+}
+.commentSection-dark::-webkit-scrollbar-thumb {
+  background-color: #fbfffb;
+  border-radius: 20px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+/* comment section style end */
+
+/* nav link hover style start */
+
+.navItem-dark a::after {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  width: 0%;
+  height: 2px;
+  background-color: #f9fafb;
+}
+.navItem-light a::after {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  width: 0%;
+  height: 2px;
+  background-color: #1e2939;
+}
+
+.navItem:hover a::after {
+  left: 0%;
+  width: 100%;
+  animation-name: navHover;
+  animation-duration: 0.3s;
+}
+@keyframes navHover {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.navItem:not(:hover) a::after {
+  right: 0%;
+  width: 0%;
+  animation-name: navHoverExit;
+  animation-duration: 0.3s;
+}
+@keyframes navHoverExit {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+/* nav link hover style end */
