@@ -8,8 +8,8 @@ import FullArticle from "./FullArticle";
 import { useDispatch, useSelector } from "react-redux";
 import { setData } from "./redux/app/slices/dataReducer";
 import ScrollTop from "./components/ScrollTop";
-import { StoreData } from "./StoreData";
 import Loading from "./components/Loading";
+import { FetchData } from "../FetchData";
 
 const General = React.lazy(() => import("./components/categories/General"));
 const Business = React.lazy(() => import("./components/categories/Business"));
@@ -33,7 +33,7 @@ function App() {
           setLoading(false);
         }, 1000);
       } else {
-        StoreData(dispatch);
+        await FetchData(dispatch);
         setTimeout(() => {
           setLoading(false);
         }, 1000);
